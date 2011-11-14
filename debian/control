@@ -7,13 +7,13 @@ standards-Version: 3.8.1.0
 Homepage: http://sourceforge.net/projects/flightpred
 
 Package: printrun-base
-Architecture: i386 amd64 armel
+Architecture: all
 Essential: no
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${dist:Depends}, python-serial
 Description: A host software for the RepRap 3d printer. It works well with the teacup firmware and Gen7 electronics.
 
 Package: printrun-gui
-Architecture: i386 amd64 armel
+Architecture: all
 Essential: no
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${dist:Depends}, printrun-base, python-wxgtk2.8
 Description: A host software for the RepRap 3d printer. It works well with the teacup firmware and Gen7 electronics.

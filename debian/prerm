@@ -7,9 +7,9 @@ case "$1" in
 		#
 		# do here pre removes
 		#
-		echo "remove flightpred from apache"
-		a2dissite flightpred.local
-		/etc/init.d/apache2 reload
+		echo "the compiled files"
+		rm /usr/share/printrun/*.pyc
+		rm /usr/share/printrun/*.pyo
 		;;
 	failed-upgrade)
 		;;
