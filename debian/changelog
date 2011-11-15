@@ -1,4 +1,4 @@
-printrun (0.0.1) oneiric natty maverick precise squeeze wheezy sid; urgency=low
+printrun (0.0.2) oneiric natty maverick precise squeeze wheezy sid; urgency=low
 
   * initial debian package
 
