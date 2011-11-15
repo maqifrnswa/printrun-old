@@ -20,6 +20,7 @@ set -e
 
 case "$1" in
 	configure|abort-upgrade|abort-remove|abort-deconfigure)
+		update-menus
 		DIR=/usr/share/printrun
 		cd $DIR
 		python -c 'import sys, compileall ; exit_status = int(not compileall.main()); sys.exit(exit_status)' -q $DIR
