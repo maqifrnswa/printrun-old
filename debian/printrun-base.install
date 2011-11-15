@@ -3,8 +3,6 @@
 /usr/share/printrun/calibrateextruder.py
 /usr/share/printrun/custombtn.txt
 /usr/share/printrun/gviz.py
-/usr/share/printrun/P-face.ico
-/usr/share/printrun/plater.ico
 /usr/share/printrun/plater.py
 /usr/share/printrun/printcore.py
 /usr/share/printrun/pronsole.ico
