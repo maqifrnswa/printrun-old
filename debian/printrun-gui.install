@@ -8,5 +8,6 @@
 /usr/share/printrun/P-face.ico
 /usr/share/printrun/plater.ico
 /usr/share/printrun/images/*
+/usr/share/applications/*.desktop
 /usr/bin/pronterface
 
