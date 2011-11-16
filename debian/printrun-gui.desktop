@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Printrun
+Comment=Control program for RepRap 3d printers
+GenericName=Printrun
+Icon=plater
+Exec=pronterface
+Terminal=false
+Categories=Development;Science;
+MimeType=application/stl;
