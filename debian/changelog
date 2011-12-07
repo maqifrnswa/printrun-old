@@ -1,10 +1,10 @@
-printrun (0.0.5~ubuntu) precise oneiric natty maverick; urgency=low
+printrun (0.0.6~ubuntu) precise oneiric natty maverick; urgency=low
 
   * coupling with the new skeinforge deb
 
  -- Richard Ulrich <richi@paraeasy.ch>  Wed, 7 Dec 2011 22:10:00 +0100
 
-printrun (0.0.4) oneiric natty maverick precise squeeze wheezy sid; urgency=low
+printrun (0.0.5) oneiric natty maverick precise squeeze wheezy sid; urgency=low
 
   * initial debian package
 
