@@ -1083,17 +1083,20 @@ class pronsole(cmd.Cmd):
             if not(os.path.exists(l[0])):
                 print "File not found!"
                 return
-        if not os.path.exists("skeinforge"):
-            print "Skeinforge not found. \nPlease copy Skeinforge into a directory named \"skeinforge\" in the same directory as this file."
-            return
-        if not os.path.exists("skeinforge/__init__.py"):
-            f=open("skeinforge/__init__.py","w")
-            f.close()
+        if not os.path.exists("/usr/lib/python2.6/dist-packages/skeinforge/__init__.py"):
+            if not os.path.exists("skeinforge"):
+                print _("Skeinforge not found. \nPlease copy Skeinforge into a directory named \"skeinforge\" in the same directory as this file.")
+                return
+            if not os.path.exists("skeinforge/__init__.py"):
+                f=open("skeinforge/__init__.py","w")
+                f.close()
         try:
             from skeinforge.skeinforge_application.skeinforge_utilities import skeinforge_craft
             from skeinforge.skeinforge_application import skeinforge
             if(settings):
-                param = "skeinforge/skeinforge_application/skeinforge.py"
+                param = "/usr/lib/python2.6/dist-packages/skeinforge/skeinforge_application/skeinforge.py"
+                if not os.path.exists(param):
+                    param = "skeinforge/skeinforge_application/skeinforge.py"
                 print "Entering skeinforge settings: ",sys.executable," ",param
                 subprocess.call([sys.executable,param])
             else:

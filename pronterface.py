@@ -1133,12 +1133,13 @@ class PronterWindow(wx.Frame,pronsole.pronsole):
         
     def skein(self,filename):
         print _("Skeining ") + filename
-        if not os.path.exists("skeinforge"):
-            print _("Skeinforge not found. \nPlease copy Skeinforge into a directory named \"skeinforge\" in the same directory as this file.")
-            return
-        if not os.path.exists("skeinforge/__init__.py"):
-            f=open("skeinforge/__init__.py","w")
-            f.close()
+        if not os.path.exists("/usr/lib/python2.6/dist-packages/skeinforge/__init__.py"):
+            if not os.path.exists("skeinforge"):
+                print _("Skeinforge not found. \nPlease copy Skeinforge into a directory named \"skeinforge\" in the same directory as this file.")
+                return
+            if not os.path.exists("skeinforge/__init__.py"):
+                f=open("skeinforge/__init__.py","w")
+                f.close()
         self.cout=StringIO.StringIO()
         self.filename=filename
         self.stopsf=0
