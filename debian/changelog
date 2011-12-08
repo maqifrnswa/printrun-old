@@ -1,4 +1,4 @@
-printrun (0.0.6~ubuntu) precise oneiric natty maverick; urgency=low
+printrun (0.0.6~oneiric) oneiric; urgency=low
 
   * coupling with the new skeinforge deb
 
