@@ -1,16 +1,16 @@
-printrun (0.0.7~oneiric) oneiric; urgency=low
+printrun (0.0.7~maverick) maverick; urgency=low
 
   * Added missing build dependency to debhelper
 
- -- Richard Ulrich <richi@paraeasy.ch>  Wed, 7 Dec 2011 22:10:00 +0100
+ -- Richard Ulrich <richi@paraeasy.ch>  Thu, 8 Dec 2011 22:10:00 +0100
 
-printrun (0.0.6~oneiric) oneiric; urgency=low
+printrun (0.0.6~maverick) maverick; urgency=low
 
   * coupling with the new skeinforge deb
 
  -- Richard Ulrich <richi@paraeasy.ch>  Wed, 7 Dec 2011 22:10:00 +0100
 
-printrun (0.0.5) oneiric natty maverick precise squeeze wheezy sid; urgency=low
+printrun (0.0.5) maverick maverick maverick maverick squeeze wheezy sid; urgency=low
 
   * initial debian package
 
