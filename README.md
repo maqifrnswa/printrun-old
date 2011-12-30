@@ -12,7 +12,8 @@ Download the following, and install in this order:
   1. http://python.org/ftp/python/2.7.2/python-2.7.2.msi
   2. http://pypi.python.org/packages/any/p/pyserial/pyserial-2.5.win32.exe
   3. http://downloads.sourceforge.net/wxpython/wxPython2.8-win32-unicode-2.8.12.0-py27.exe
-  4. http://launchpad.net/pyreadline/1.7/1.7/+download/pyreadline-1.7.zip
+  4. http://launchpad.net/pyreadline/1.7/1.7/+download/pyreadline-1.7.win32.exe
+
 ## Ubuntu/Debian
 `sudo apt-get install python-serial python-wxgtk2.8`
 
@@ -22,7 +23,9 @@ Download the following, and install in this order:
 ## Mac OS X Lion
 
   1. Ensure that the active Python is the system version. (`brew uninstall python` or other appropriate incantations)
-  2. Download an install [wxPython version 2.9-Carbon](http://wxpython.org/download.php#unstable) (the Cocoa version doesn't work)
+  2. Download an install [wxPython2.8-osx-unicode] matching to your python version (most likely 2.7 on Lion, 
+        check with: python --version) from: http://wxpython.org/download.php#stable
+  Known to work PythonWX: http://superb-sea2.dl.sourceforge.net/project/wxpython/wxPython/2.8.12.1/wxPython2.8-osx-unicode-2.8.12.1-universal-py2.7.dmg
   3. Download and unpack pyserial from http://pypi.python.org/packages/source/p/pyserial/pyserial-2.5.tar.gz
   4. In a terminal, change to the folder you unzipped to, then type in: `sudo python setup.py install`
 
