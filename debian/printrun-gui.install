@@ -1,0 +1,13 @@
+/usr/share/printrun/pronterface.py
+/usr/share/printrun/SkeinforgeQuickEditDialog.py
+/usr/share/printrun/stlview.py
+/usr/share/printrun/test.py
+/usr/share/printrun/xybuttons.py
+/usr/share/printrun/zbuttons.py
+/usr/share/printrun/zscaper.py
+/usr/share/printrun/P-face.ico
+/usr/share/printrun/plater.ico
+/usr/share/printrun/images/*
+/usr/share/applications/*.desktop
+/usr/bin/pronterface
+
