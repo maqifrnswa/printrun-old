@@ -1,3 +1,10 @@
+printrun (0.0.9~maverick) maverick; urgency=low
+
+  * Switched to the experimental branch
+  * Including localization
+
+ -- Richard Ulrich <richi@paraeasy.ch>  Sun, 1 Jan 2012 20:42:00 +0200
+
 printrun (0.0.8~maverick) maverick; urgency=low
 
   * Correction on the desktop file

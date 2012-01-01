@@ -47,9 +47,11 @@ install: build
 	mkdir -p $(CURDIR)/debian/tmp/usr/bin
 	mkdir -p $(CURDIR)/debian/tmp/usr/share/printrun
 	mkdir -p $(CURDIR)/debian/tmp/usr/share/printrun/images
+	mkdir -p $(CURDIR)/debian/tmp/usr/share/printrun/locale
 	mkdir -p $(CURDIR)/debian/tmp/usr/share/applications
 	install -m 0755 *.*	-t $(CURDIR)/debian/tmp/usr/share/printrun
-	install -m 0755 images/*.*	-t $(CURDIR)/debian/tmp/usr/share/printrun/images
+	install -m 0755 images/* -t $(CURDIR)/debian/tmp/usr/share/printrun/images
+	cp locale/* -r $(CURDIR)/debian/tmp/usr/share/printrun/locale/
 	install -m 0755 debian/*.desktop	-t $(CURDIR)/debian/tmp/usr/share/applications
 	(cd $(CURDIR)/debian/tmp/usr/bin; ln -fs ../share/printrun/pronsole.py pronsole )
 	(cd $(CURDIR)/debian/tmp/usr/bin; ln -fs ../share/printrun/pronterface.py pronterface )
