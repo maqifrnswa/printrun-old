@@ -4,6 +4,8 @@
 /usr/share/printrun/xybuttons.py
 /usr/share/printrun/zbuttons.py
 /usr/share/printrun/zscaper.py
+/usr/share/printrun/gviz.py
+/usr/share/printrun/plater.py
 /usr/share/printrun/P-face.ico
 /usr/share/printrun/plater.ico
 /usr/share/printrun/images/*
