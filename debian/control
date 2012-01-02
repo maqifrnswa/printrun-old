@@ -9,7 +9,7 @@ Homepage: http://sourceforge.net/projects/flightpred
 Package: printrun-base
 Architecture: all
 Essential: no
-Depends: ${misc:Depends}, python-serial, menu
+Depends: ${misc:Depends}, python-serial
 Description: A host software for the RepRap 3d printer. 
  It works well with the teacup firmware and Gen7 electronics.
  The base package contains the commandline client. 
@@ -18,7 +18,7 @@ Description: A host software for the RepRap 3d printer.
 Package: printrun-gui
 Architecture: all
 Essential: no
-Depends: ${misc:Depends}, menu, printrun-base, python-wxgtk2.8, python-tk, skeinforge
+Depends: ${misc:Depends}, menu, printrun-base, python-wxgtk2.8, python-tk, skeinforge, python-pyglet
 Description: A host software for the RepRap 3d printer. 
  It works well with the teacup firmware and Gen7 electronics.
  The gui package contains the graphical user interface.

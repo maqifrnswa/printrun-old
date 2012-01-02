@@ -1,0 +1,10 @@
+#!/bin/bash
+# launcher for printrun
+
+if [ ! -f ~/.pronsolerc ];
+then
+	echo "set sliceoptscommand python /usr/lib/python2.6/dist-packages/skeinforge/skeinforge_application/skeinforge.py" > ~/.pronsolerc
+	echo "set slicecommand python /usr/lib/python2.6/dist-packages/skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py \$s" >> ~/.pronsolerc
+fi
+
+/usr/share/printrun/pronsole.py

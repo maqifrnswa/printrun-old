@@ -1,3 +1,10 @@
+printrun (0.0.10~maverick) maverick; urgency=low
+
+  * moved graphviz and plater to the gui package
+  * writing default configuration if nonexistent in the launcher script
+
+ -- Richard Ulrich <richi@paraeasy.ch>  Mon, 2 Jan 2012 22:07:00 +0200
+
 printrun (0.0.9~maverick) maverick; urgency=low
 
   * Switched to the experimental branch
