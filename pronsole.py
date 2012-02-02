@@ -1,4 +1,20 @@
 #!/usr/bin/env python
+
+# This file is part of the Printrun suite.
+# 
+# Printrun is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# Printrun is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with Printrun.  If not, see <http://www.gnu.org/licenses/>.
+
 import cmd, printcore, sys 
 import glob, os, time
 import sys, subprocess 
@@ -142,7 +158,7 @@ def estimate_duration(g):
 
                 currenttravel = hypot3d(x, y, z, lastx, lasty, lastz)
                 distance = 2* ((lastf+f) * (f-lastf) * 0.5 ) / acceleration  #2x because we have to accelerate and decelerate
-                if distance <= currenttravel:
+                if distance <= currenttravel and ( lastf + f )!=0 and f!=0:
                     moveduration = 2 * distance / ( lastf + f )
                     currenttravel -= distance
                     moveduration += currenttravel/f
@@ -252,8 +268,8 @@ class pronsole(cmd.Cmd):
         self.helpdict["bedtemp_pla"] = _("Heated Build Platform temp for PLA (default: 60 deg C)")
         self.helpdict["e_feedrate"] = _("Feedrate for Control Panel Moves in Extrusions (default: 300mm/min)")
         self.helpdict["port"] = _("Port used to communicate with printer")
-        self.helpdict["slicecommand"] = _("Feedrate for Control Panel Moves in Extrusions.\n   default:\n       python skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s)")
-        self.helpdict["sliceoptscommand"] = _("Feedrate for Control Panel Moves in Extrusions.\n   default:\n       python skeinforge/skeinforge_application/skeinforge.py")
+        self.helpdict["slicecommand"] = _("Slice command\n   default:\n       python skeinforge/skeinforge_application/skeinforge_utilities/skeinforge_craft.py $s)")
+        self.helpdict["sliceoptscommand"] = _("Slice settings command\n   default:\n       python skeinforge/skeinforge_application/skeinforge.py")
         self.helpdict["temperature_abs"] = _("Extruder temp for ABS (default: 230 deg C)")
         self.helpdict["temperature_pla"] = _("Extruder temp for PLA (default: 185 deg C)")
         self.helpdict["xy_feedrate"] = _("Feedrate for Control Panel Moves in X and Y (default: 3000mm/min)")
