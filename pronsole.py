@@ -1148,6 +1148,7 @@ class pronsole(cmd.Cmd):
             if not(os.path.exists(l[0])):
                 print "File not found!"
                 return
+
         try:
             import shlex
             if(settings):

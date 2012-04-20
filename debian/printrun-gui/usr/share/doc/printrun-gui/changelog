@@ -1,6 +1,0 @@
-printrun (0.99~oneiric) oneiric; urgency=low
-
-  * initial debian package
-
- -- Richard Ulrich <richi@paraeasy.ch>  Mon, 14 Nov 2011 22:30:00 +0200
-

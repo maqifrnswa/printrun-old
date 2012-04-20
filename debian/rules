@@ -9,87 +9,9 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+%:
+	dh $@ --with python2
 
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	# Add here commands to configure the package.
-
-	touch configure-stamp
-
-
-build: build-stamp
-
-build-stamp: configure-stamp  
-	dh_testdir
-
-	touch $@
-
-clean: 
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp configure-stamp
-
-	# Add here commands to clean up after the build process.
-	# $(MAKE) clean
-	rm -rf $(CURDIR)/build-debian
-	rm -rf $(CURDIR)/debian/tmp
-	rm -rf $(CURDIR)/debian/printrun
-
-	dh_clean 
-
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep  
-	dh_installdirs
-
-	mkdir -p $(CURDIR)/debian/tmp/usr/bin
-	mkdir -p $(CURDIR)/debian/tmp/usr/share/printrun
-	mkdir -p $(CURDIR)/debian/tmp/usr/share/printrun/images
-	mkdir -p $(CURDIR)/debian/tmp/usr/share/applications
-	install -m 0755 *.*	-t $(CURDIR)/debian/tmp/usr/share/printrun
-	install -m 0755 images/*.*	-t $(CURDIR)/debian/tmp/usr/share/printrun/images
-	install -m 0755 debian/*.desktop	-t $(CURDIR)/debian/tmp/usr/share/applications
-	(cd $(CURDIR)/debian/tmp/usr/bin; ln -fs ../share/printrun/pronsole.py pronsole )
-	(cd $(CURDIR)/debian/tmp/usr/bin; ln -fs ../share/printrun/pronterface.py pronterface )
-
-
-# Build architecture-independent files here.
-binary-indep: build install
-# We have nothing to do by default.
-
-# Build architecture-dependent files here.
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_installchangelogs 
-	dh_installdocs
-	dh_installexamples
-	dh_install --sourcedir=debian/tmp/
-	dh_installmenu
-#	dh_installdebconf
-#	dh_installlogrotate
-#	dh_installemacsen
-#	dh_installpam
-#	dh_installmime
-#	dh_python
-#	dh_installinit
-	dh_installcron
-#	dh_installinfo
-	dh_installman
-	dh_lintian
-	dh_link
-	dh_strip
-	dh_compress
-#	dh_perl
-	dh_makeshlibs -pprintrun -V'printrun (>= 0.1)'
-	dh_shlibdeps -a
-	dh_fixperms
-	dh_installdeb
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure
+override_dh_python2:
+	dh_python2
+	dh_python2 /usr/share/printrun
