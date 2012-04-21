@@ -1,8 +1,8 @@
-20cube_export.gcode /usr/share/printrun/
-bufferedcanvas.py /usr/share/printrun/
-calibrateextruder.py /usr/share/printrun/
-custombtn.txt /usr/share/printrun/
-printcore.py /usr/share/printrun/
-pronsole.ico /usr/share/printrun/
-pronsole.py /usr/share/printrun/
-stltool.py /usr/share/printrun/
+20cube_export.gcode /usr/share/pronterface/
+bufferedcanvas.py /usr/share/pronterface/
+calibrateextruder.py /usr/share/pronterface/
+custombtn.txt /usr/share/pronterface/
+printcore.py /usr/share/pronterface/
+pronsole.ico /usr/share/pronterface/
+pronsole.py /usr/share/pronterface/
+stltool.py /usr/share/pronterface/
