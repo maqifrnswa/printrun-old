@@ -1,6 +1,6 @@
-?package(printrun-gui):needs=X11 \
+?package(pronterface):needs=X11 \
 	section=Applications/Science/Engineering    \
-	title="printrun" \
-	command="/usr/share/printrun/pronterface.py" \
+	title="pronterface" \
+	command="pronterface" \
 	icon="/usr/share/printrun/P-face.ico"
 

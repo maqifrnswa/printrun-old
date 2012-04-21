@@ -5,6 +5,7 @@ xybuttons.py /usr/share/pronterface/
 projectlayer.py /usr/share/pronterface/
 zbuttons.py /usr/share/pronterface/
 zscaper.py /usr/share/pronterface/
+gcview.py /usr/share/pronterface/
 gviz.py /usr/share/pronterface/
 plater.py /usr/share/pronterface/
 P-face.ico /usr/share/pronterface/
